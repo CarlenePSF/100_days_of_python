@@ -1,0 +1,10 @@
+# created by virtualenv automatically
+
+# diretorios
+**/.venv
+
+# files
+*.pdf
+*.txt
+*.xml
+*.iml
