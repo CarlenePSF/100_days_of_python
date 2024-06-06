@@ -39,5 +39,5 @@ greet()
 greet_with_name("Angela")
 greet_with_name_location("Angela", "England")
 
-# with kyeword arguments avoids change in parameters
+# with keyword arguments avoids change in parameters
 greet_with_name_location(location="England", name="Angela")
