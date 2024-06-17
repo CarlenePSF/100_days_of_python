@@ -18,38 +18,37 @@ def level_of_difficulty():
         return HARD_LEVEL_TURNS
 
 
-def check_answer(user_guess, computer_guess, turns):
+def check_answer(user_guess, computer_guess, attempts):
     if user_guess < computer_guess:
-        print("Too low.")
-        return turns - 1
+        print("Your guess is too low.")
+        return attempts - 1
     elif user_guess > computer_guess:
-        print("Too high.")
-        return turns - 1
+        print("Your guess is too high.")
+        return attempts - 1
     if user_guess == computer_guess:
         print(f"You got it right! The aswer was {computer_guess}")
-
+        return None
 
 
 def play_game():
     print(logo)
-
     print("Welcome to the game of Number Guessing!")
     print("I'm thinking of a number between 1 and 100.")
-    answer = randint(1, 100)
-    print(f"The correct answer is {answer}")
+    number_guess = randint(1, 100)
+    print(f"Psst, the correct answer is {number_guess}")
 
     turns = level_of_difficulty()
-    guess = 0
 
-    while guess != answer:
+    while turns > 0:
         print(f"You have {turns} attempts to guess the number.")
         guess = int(input("Make a guess: "))
-        turns = check_answer(guess, answer, turns)
-
+        turns = check_answer(guess, number_guess, turns)
         if turns == 0:
-            print("You've run out of guesses, you lose.")
-            return
-        elif guess != answer:
+            print(f"You are out of attempts.")
+            print("You lose the game!")
+        elif turns is None:
+            break
+        else:
             print("Guess again.")
 
 
