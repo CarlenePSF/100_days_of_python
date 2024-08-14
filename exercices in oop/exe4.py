@@ -43,14 +43,15 @@ class Circle(Shape):
     def find_perimeter(self):
         return 2 * pi * self.radius
 
+
 class Triangle(Shape):
-    def __init__(self, base, height, side1, side2, side3):
+    def __init__(self, base, height, side1, side2):
         self.number_of_edges = 3
         self.base = base
         self.height = height
         self.side1 = side1
         self.side2 = side2
-        self.side3 = side3
+        self.side3 = base
 
     def find_area(self):
         return (self.base * self.height)/2
@@ -72,7 +73,7 @@ print(hexagonon.find_perimeter())
 print(hexagonon.find_external_angles())
 print(hexagonon.number_of_diagonals())
 
-triangle = Triangle(4, 2, 6, 8, 3)
+triangle = Triangle(4, 2, 6, 8)
 print(triangle.find_area())
 print(triangle.find_perimeter())
 
