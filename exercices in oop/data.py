@@ -1,0 +1,1 @@
+livros = [{'titulo': 'alguma coisa', 'autor': 'john Doo', 'paginas': '1222'}, {'titulo': 'baba', 'autor': 'asas', 'paginas': '123'}, {'titulo': 'qwe', 'autor': 'wqwq', 'paginas': '123'}]
