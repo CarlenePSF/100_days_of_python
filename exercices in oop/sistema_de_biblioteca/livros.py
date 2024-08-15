@@ -1,1 +1,0 @@
-livros = [{'titulo': 'Pattern Recognition and Machine Learning', 'autor': 'Christopher Ma Bishop', 'paginas': '749'}, {'titulo': 'Algoritmos', 'autor': 'Thomas H. Cormen', 'paginas': '1042'}, {'titulo': 'Algoritmos', 'autor': 'Thomas H. Cormen, Charles E. Liserson, Ronald L. Rivest and Clifford Stein', 'paginas': '1042'}]
