@@ -14,6 +14,9 @@ class Shape:
 
 
 class RegularPoligon(Shape):
+    """
+    Herdou os metodos de shape, mas não os atributos, pois shape não tem atributos
+    """
     def __init__(self, number_of_edges, length_of_edges):
         self.number_of_edges = number_of_edges
         self.length_of_edges = length_of_edges
