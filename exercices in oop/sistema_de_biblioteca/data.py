@@ -5,4 +5,5 @@ livros = [
     {'titulo': 'Dom Casmurro', 'autor': 'Machado de Assis', 'paginas': '395'},
     {'titulo': 'Pattern Recognition and Machine Learning', 'autor': 'Christopher M. Bishop', 'paginas': '749'},
     {'titulo': 'Aprendizado de Máquina: Uma abordagem estatística',
-     'autor': 'Rafael Izbicki e Tiago Mendonça dos Santos', 'paginas': '272'}]
+     'autor': 'Rafael Izbicki e Tiago Mendonça dos Santos', 'paginas': '272'}
+]
