@@ -1,7 +1,15 @@
 from turtle import Turtle, Screen
 
-joy_the_turtle = Turtle()
-joy_the_turtle.shape("turtle")
+joy = Turtle()
+joy.shape("turtle")
+joy.color("blue")
+
+for _ in range(4):
+    joy.forward(100)
+    joy.left(90)
+
+
+
 
 
 
