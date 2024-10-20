@@ -1,13 +1,21 @@
 import streamlit as st
 import ast
 
-# Função para salvar os livros em um arquivo .py
-def salvar_livros(livros):
-    with open('data.py', 'w') as arquivo_py:
-        arquivo_py.write(f"livros = {repr(livros)}")
 
-# Função para carregar os livros do arquivo .py
+def salvar_livros(livros):
+    """Função para salvar os livros em um arquivo tipo .py
+    :param livros: nome do livro
+    :return: None
+    """
+    with open('data.py', 'w') as arquivo_py:
+        arquivo_py.write(f"acervo_livros = {repr(livros)}")
+
+
+
 def carregar_livros():
+    """Função para carregar os livros contidos no arquivo .py
+    :return: list
+    """
     try:
         with open('data.py', 'r') as arquivo_py:
             conteudo = arquivo_py.read()
@@ -17,8 +25,15 @@ def carregar_livros():
         return []
     return []
 
-# Função para adicionar um novo livro
+
+#
 def adicionar_livro(titulo, autor, paginas):
+    """Função para adicionar um novo livro
+    :param titulo: str
+    :param autor: str
+    :param paginas: int
+    :return: None
+    """
     livros = carregar_livros()
     novo_livro = {
         "titulo": titulo,
@@ -30,8 +45,11 @@ def adicionar_livro(titulo, autor, paginas):
 
 
 
-
 def main():
+    """
+    programa main que inicializa página do stream lit
+    :return: None
+    """
     # Interface Streamlit
     st.title("Gerenciador de Livros")
 
