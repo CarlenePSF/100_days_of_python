@@ -3,11 +3,14 @@
 import turtle
 from random import randint, random, choice
 from turtle import Turtle, Screen
+
+
 turtle.colormode(255)
 t = Turtle()
 t.pensize(7)
 t.speed("fastest")
 t.screen.title('random-walk')
+
 
 screen = Screen()
 
@@ -36,24 +39,27 @@ def move_right_or_left(p_x):
         t.setheading(180)
     t.forward(30)
 
+def main():
+    steps = 100
+    i = 0
+    j = 0
 
-steps = 100
-i = 0
-j = 0
-p_up = 5
-p_right = 5
 
-while i < steps:
-    while j < steps:
-        py = randint(1, 10)
-        px = randint(1, 10)
-        t.pencolor(random_color())
+    while i < steps:
+        while j < steps:
+            py = random()
+            px = random()
+            t.pencolor(random_color())
 
-        move_up_or_down(py)
-        move_right_or_left(px)
-        j += 1
-    i += 1
+            move_up_or_down(py)
+            move_right_or_left(px)
+            j += 1
+        i += 1
 
+
+p_up = 0.5
+p_right = 0.5
+main()
 screen.mainloop()
 
 
